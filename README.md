@@ -1,5 +1,24 @@
-# microservices_course_boilerplate
+# Chat service
 
-Данный репозиторий содержит boilerplate для выполнения домашних заданий по курсу ["Микросервисы как в BigTech-компаниях"](https://olezhek28.courses/).
 
-Автор курса: [Олег Козырев](https://www.linkedin.com/in/olezhek28/)
+## Description
+
+This is a chat service that allows users to chat with each other.
+
+## Stack
+
+- Go
+- gRPC
+- Protocol Buffers
+
+## Generate API
+
+```
+make generate
+```
+
+## Run server
+
+```
+make run
+```
