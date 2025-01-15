@@ -42,10 +42,12 @@ func (s *server) SendMessage(_ context.Context, req *chat.SendMessageRequest) (*
 
 func main() {
 	log.Println(color.GreenString("Starting chat server"))
+
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", grpcPort))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
+
 	s := grpc.NewServer()
 	reflection.Register(s)
 	chat.RegisterChatServiceServer(s, &server{})
@@ -55,4 +57,5 @@ func main() {
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
+
 }
