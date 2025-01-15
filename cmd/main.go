@@ -6,12 +6,13 @@ import (
 	"log"
 	"net"
 
-	"github.com/brianvoe/gofakeit"
+	"github.com/brianvoe/gofakeit/v7"
 	"github.com/fatih/color"
 	"github.com/golang/protobuf/ptypes/empty"
-	chat "github.com/muhinfa/chat-server/pkg/chat/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+
+	chat "github.com/mukhinfa/chat-server/pkg/chat/v1"
 )
 
 const (
